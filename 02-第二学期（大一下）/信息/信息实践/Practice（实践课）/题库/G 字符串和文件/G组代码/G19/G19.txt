@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+char a[1002], *tokens[1002], flag = -1;
+int len, b[1002], c[1002];
+int main () {
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt","w",stdout);
+    fgets(a, 1002, stdin);
+    for (len = strlen(a); len && a[len - 1] == '\n'; a[--len]='\0');
+    for (int i = 0; i < len; i++) b[a[i]]++;
+    for (int i = 'a'; i <= 'z'; i++) if (b[i] & 1) { flag = i; break; }
+    for (int i = 'a'; i <= 'z'; i++) for (int j = 1; j <= b[i] / 2; j++) printf("%c", i);
+    if (flag != -1) printf("%c", flag);
+    for (int i = 'z'; i >= 'a'; i--) for (int j = 1; j <= b[i] / 2; j++) printf("%c", i);
+    return 0;
+}

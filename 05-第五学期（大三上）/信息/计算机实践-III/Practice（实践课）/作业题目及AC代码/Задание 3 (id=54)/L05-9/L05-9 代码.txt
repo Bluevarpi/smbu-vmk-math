@@ -1,0 +1,6 @@
+tree *findBrother(tree *root, int key) {
+    tree *p, *res;
+    if (!root) return 0;
+    if (root->key == key) return (p = root->parent) ? (p->left == root ? p->right : p->left) : 0;
+    return (res = findBrother(root->left, key)) ? res : findBrother(root->right, key);
+}

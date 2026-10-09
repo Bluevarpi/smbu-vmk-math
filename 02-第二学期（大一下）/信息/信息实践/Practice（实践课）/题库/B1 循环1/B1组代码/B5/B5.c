@@ -1,0 +1,7 @@
+#include <stdio.h>
+int sum;
+int main () {
+	for (char c; (c = getchar()) != '\n'; sum += c - '0');
+	printf("%d", sum);
+	return 0;
+}

@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main () {
+	int mul = 1;
+	for (char c; (c = getchar()) != '\n'; mul *= c - '0');
+	printf("%d", mul);
+	return 0;
+}

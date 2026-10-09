@@ -1,0 +1,7 @@
+#include <stdio.h>
+int n;
+int main () {
+	for (char c[100]; scanf("%c", &c[++n]) && c[n] != '\n';) if (c[n - 1] == c[n]) { printf("YES"); return 0; }
+	printf("NO");
+	return 0;
+}

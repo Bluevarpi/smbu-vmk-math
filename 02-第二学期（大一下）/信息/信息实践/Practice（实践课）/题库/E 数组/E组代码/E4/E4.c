@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main () {
+	int a[11], max1 = 1, max2 = 1;
+	for (int i = 1; i <= 10 && scanf("%d", &a[i]); i++) if (a[max1] < a[i]) max1 = i;
+	for (int i = 1; i <= 10; i++) if (i != max1) if (a[max2] < a[i]) max2 = i;
+	printf("%d", max1 + max2);
+	return 0;
+}

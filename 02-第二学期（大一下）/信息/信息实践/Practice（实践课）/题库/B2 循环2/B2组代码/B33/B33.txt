@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int Fib (int n) {
+	return n < 3 ? 1 : Fib(n - 1) + Fib(n - 2);
+}
+
+int main () {
+	int n, i = 1;
+	for (scanf("%d", &n); i <= n; i++) printf("%d ", Fib(i));
+	return 0;
+}

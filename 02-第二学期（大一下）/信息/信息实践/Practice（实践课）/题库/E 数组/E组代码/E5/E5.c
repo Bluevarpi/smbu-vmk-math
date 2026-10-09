@@ -1,0 +1,7 @@
+#include <stdio.h>
+int a[11], sum;
+int main () {
+	for (int i = 1; i <= 10 && scanf("%d", &a[i]); i++) if (a[i] > 0) sum += a[i];
+	printf("%d", sum);
+	return 0;
+}

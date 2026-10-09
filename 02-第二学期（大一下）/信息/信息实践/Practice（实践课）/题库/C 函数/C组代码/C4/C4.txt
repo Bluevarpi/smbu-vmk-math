@@ -1,0 +1,11 @@
+#include <stdio.h>
+int x, f, ans;
+int main () {
+    for (; scanf("%d", &x) && x; ans = ans < f ? f : ans) {
+        if (x < -2) f = 4;
+        if (x >= 2) f = x * x + 4 * x + 5;
+        if (-2 <= x && x < 2) f = x * x;
+    }
+    printf("%d", ans);
+    return 0;
+}

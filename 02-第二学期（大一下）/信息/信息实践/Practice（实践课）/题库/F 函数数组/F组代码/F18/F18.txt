@@ -1,0 +1,7 @@
+#include <stdio.h>
+int a[101][101], max = -2147483645, sum;
+int main () {
+	for (int i = 1; i <= 10; sum += max, max = -2147483645, i++) for (int j = 1; j <= 10; max = max < a[i][j] ? a[i][j] : max, j++) scanf("%d", &a[i][j]);
+	printf("%d", sum);
+	return 0;
+}

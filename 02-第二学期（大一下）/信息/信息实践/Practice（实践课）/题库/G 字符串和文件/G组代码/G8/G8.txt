@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int cnt[100000] , num[100000], cnt_num, n, digit, k;
+
+int main() {
+	FILE *Input, *Output;
+	char str[10000];
+    Input = fopen("input.txt", "r");
+    Output = fopen("output.txt", "w");
+    if (fgets(str, sizeof(str), Input) == NULL) fclose(Input);
+    fclose(Input);
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isdigit((unsigned char)str[i])) n = n * 10 + (str[i] - '0'), digit = 1;
+        else if (digit) num[cnt_num++] = n, n = 0, digit = 0;
+    }
+    if (digit) num[cnt_num++] = n;
+    for (int i = 0; i < cnt_num; i++) cnt[num[i]]++;
+    for (int i = 0; i < 100000; i++) while (cnt[i]-- > 0) num[k++] = i;
+    for (int i = 0; i < cnt_num; i++) fprintf(Output, "%d ", num[i]);
+    fclose(Output);
+    return 0;
+}

@@ -1,0 +1,7 @@
+#include <stdio.h>
+int a[11], cnt[1000000];
+int main () {
+	for (int i = 1; i <= 10; cnt[a[i] + 100000]++, i++) scanf("%d", &a[i]);
+	for (int i = 1; i <= 10; i++) if (cnt[a[i] + 100000] == 1) printf("%d ", a[i]);
+	return 0;
+}

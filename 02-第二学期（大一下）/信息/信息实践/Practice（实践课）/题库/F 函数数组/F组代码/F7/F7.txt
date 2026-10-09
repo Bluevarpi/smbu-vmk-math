@@ -1,0 +1,9 @@
+int compression(int a[], int b[], int N) {
+    int cnt = 0, k = 0, tmp = 0;
+    for (int i = 0; i < N; i++) {
+        if (a[i] == tmp) cnt++;
+        else b[k++] = cnt, cnt = 1, tmp = a[i];
+    }
+	b[k++] = cnt;
+    return k;
+}

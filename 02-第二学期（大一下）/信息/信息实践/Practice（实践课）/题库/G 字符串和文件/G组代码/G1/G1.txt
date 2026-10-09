@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char input[100000];
+    FILE *readFile, *writeFile;
+    int length;
+    readFile = fopen("input.txt", "r");
+    writeFile = fopen("output.txt", "w");
+    fgets(input, 100000, readFile);
+    input[strcspn(input, "\n")] = 0;
+    length = strlen(input);
+    fprintf(writeFile, "%s, %s, %s %d", input, input, input, length);
+    fclose(readFile);
+    fclose(writeFile);
+    return 0;
+}

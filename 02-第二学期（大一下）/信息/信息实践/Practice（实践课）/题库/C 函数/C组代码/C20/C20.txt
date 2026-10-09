@@ -1,0 +1,7 @@
+#include <stdio.h>
+int cnt;
+int main () {
+	for (char c; (c = getchar()) != '.'; cnt += c == '(' ? 1 : -1) if (cnt < 0) { printf("NO"); return 0; }
+	printf(cnt ? "NO" : "YES");
+	return 0;
+}

@@ -1,0 +1,6 @@
+#include <stdio.h>
+int n, k = 1;
+int main () {
+	for (scanf("%d", &n); k <= n; k++) printf("%d %d %d\n", k, k * k, k * k * k);
+	return 0;
+}

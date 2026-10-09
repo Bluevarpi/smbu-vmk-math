@@ -1,0 +1,7 @@
+#include <stdio.h>
+int m, n;
+int main () {
+	scanf("%d%d", &m, &n);
+	for (int i = m < n ? m : n; i <= n || i <= m; i++) printf("%d ", i * i * i);
+	return 0;
+}

@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main () {
+	int a[11];
+	for (int i = 1; i <= 10 && scanf("%d", &a[i]); i++) if ((a[i] / 10) % 10 == 0) printf("%d ", a[i]);
+	return 0;
+}

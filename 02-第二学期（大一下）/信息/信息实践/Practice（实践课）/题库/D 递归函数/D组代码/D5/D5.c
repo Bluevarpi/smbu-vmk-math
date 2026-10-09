@@ -1,0 +1,8 @@
+#include <stdio.h>
+int n, k, a[100];
+int main () {
+	for (scanf("%d", &n); n; n >>= 1) a[++k] = n & 1;
+	if (k) while (k) printf("%d", a[k--]);
+	else printf("0");
+	return 0;
+}

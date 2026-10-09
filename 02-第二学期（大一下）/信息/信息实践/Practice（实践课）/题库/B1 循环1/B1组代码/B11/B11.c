@@ -1,0 +1,8 @@
+#include <stdio.h>
+char a[100];
+int n;
+int main () {
+	while (scanf("%c", &a[++n]) && a[n] != '\n');
+	while (--n) printf("%c", a[n]);
+	return 0;
+}

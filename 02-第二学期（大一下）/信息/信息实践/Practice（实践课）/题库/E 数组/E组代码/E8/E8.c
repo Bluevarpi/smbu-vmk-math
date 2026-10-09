@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main () {
+	int a[13];
+	for (int i = 1; i <= 12; i++) scanf("%d", &a[i]);
+	for (int i = 1; i <= 3; i++) for (int j = 4 * i; j >= 4 * i - 3; j--) printf("%d ", a[j]);
+	return 0;
+}

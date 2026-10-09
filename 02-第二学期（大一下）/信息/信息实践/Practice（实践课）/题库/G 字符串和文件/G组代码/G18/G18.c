@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char input[10001], output[10001] = {0}, ch;
+    int n = 0, blank = 1;
+    FILE *inFile = fopen("input.txt", "r");
+    while ((ch = fgetc(inFile)) != EOF) {
+        if (blank && ch == ' ') continue;
+        if (ch != ' ' || n == 0 || output[n - 1] != ' ') {
+            output[n++] = ch, blank = ch != ' ' ? 0 : blank;
+        } else continue;
+    }
+    fclose(inFile);
+    output[n] = '\0';
+    FILE *outFile = fopen("output.txt", "w");
+    fprintf(outFile, "%s", output);
+    fclose(outFile);
+    return 0;
+}

@@ -1,0 +1,7 @@
+#include <stdio.h>
+int n, cnt[2];
+int main () {
+	for (char c; (c = getchar()) != '\n'; cnt[(c - '0') % 2]++);
+	printf("%d %d", cnt[0], cnt[1]);
+	return 0;
+}

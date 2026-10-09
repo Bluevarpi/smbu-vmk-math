@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main () {
+	int a[13];
+	for (int i = 1; i <= 12; i++) scanf("%d", &a[i]);
+	for (int i = 9; i <= 12; i++) printf("%d ", a[i]);
+	for (int i = 1; i <= 8; i++) printf("%d ", a[i]);
+	return 0;
+}

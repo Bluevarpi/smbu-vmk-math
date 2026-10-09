@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main () {
+    char a, b;
+    scanf("%c%c", &a, &b);
+    printf((a - 'A' + b - '1') % 2 ? "WHITE" : "BLACK");
+    return 0;
+}

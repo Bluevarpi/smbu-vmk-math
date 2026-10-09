@@ -1,0 +1,10 @@
+#include <stdio.h>
+int a[30], min[2] = {2147483645, 2147483645}, k, l;
+int main () {
+	for (int i = 0; i < 30; i++) scanf("%d", &a[i]);
+	for (int i = 0; i < 30; i++) if (min[0] > a[i]) min[0] = a[i], k = i;
+	for (int i = 0; i < 30; i++) if (min[1] > a[i] && i != k) min[1] = a[i], l = i;
+	if (k < l) printf("%d %d", k, l);
+	else printf("%d %d", l, k);
+	return 0;
+}

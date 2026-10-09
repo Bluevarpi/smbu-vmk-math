@@ -1,0 +1,8 @@
+#include <stdio.h>
+char c[1000];
+int n;
+int main () {
+	while (scanf("%c", &c[++n]) && c[n] != '.');
+	while (--n) printf("%c", c[n]);
+	return 0;
+}

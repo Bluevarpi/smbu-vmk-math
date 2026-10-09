@@ -1,0 +1,14 @@
+#include <stdio.h>
+int cnt[26], n;
+char c[10000];
+int main () {
+    while (scanf("%c", &c[n]) && c[n] != '.') n++;
+    for (int i = 0; i <= n; i++) {
+        if (c[i] != '.') cnt[c[i] - 'a']++;
+        if (i && c[i] != c[i - 1]) {
+            printf("%c%d", c[i - 1], cnt[c[i - 1] - 'a']);
+            cnt[c[i - 1] - 'a'] = 0;
+        }
+    }
+    return 0;
+}
