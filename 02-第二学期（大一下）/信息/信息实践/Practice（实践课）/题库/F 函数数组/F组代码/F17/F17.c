@@ -1,0 +1,7 @@
+#include <stdio.h>
+int a[26][26], tr;
+int main () {
+	for (int i = 1; i <= 5; tr += a[i][i], i++) for (int j = 1; j <= 5; j++) scanf("%d", &a[i][j]);
+	printf("%d", tr);
+	return 0;
+}

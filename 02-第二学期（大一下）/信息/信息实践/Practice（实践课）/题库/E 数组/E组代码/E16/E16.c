@@ -1,0 +1,8 @@
+#include <stdio.h>
+int a[11], cnt[10000], max = -2147483645, res = -2147483645, ans;
+int main () {
+	for (int i = 1; i <= 10; max = max < a[i] ? a[i] : max, cnt[a[i]]++, i++) scanf("%d", &a[i]);
+	for (int i = 0; i <= max; i++) if (cnt[i] > res) ans = i, res = cnt[i];
+	printf("%d", ans);
+	return 0;
+}

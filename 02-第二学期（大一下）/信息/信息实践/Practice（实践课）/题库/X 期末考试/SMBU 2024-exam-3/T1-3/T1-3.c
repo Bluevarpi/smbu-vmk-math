@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main () {
+	int n;
+	for (scanf("%d", &n); n--; puts("")) for (int i = 0; i <= n; i++) printf("*");
+	return 0;
+}

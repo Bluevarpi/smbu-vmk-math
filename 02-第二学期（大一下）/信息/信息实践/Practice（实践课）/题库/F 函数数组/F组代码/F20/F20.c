@@ -1,0 +1,22 @@
+#include <stdio.h>
+int a[11], cnt[2], p;
+int main () {
+	for (int i = 1; i <= 10; cnt[a[i] & 1]++, i++) scanf("%d", &a[i]);
+	if (cnt[0] > cnt[1])
+		for (int i = 1; i <= 10; i++) {
+			if (a[i] & 1) {
+				for (p = 1; a[i]; a[i] /= 10) if ((a[i] % 10) & 1) p *= a[i] % 10;
+				printf("%d ", p);
+			}
+			else printf("%d ", a[i]);
+		}
+	else
+		for (int i = 1; i <= 10; i++) {
+			if (a[i] & 1) printf("%d ", a[i]);
+			else {
+				for (p = 1; a[i]; a[i] /= 10) if (((a[i] % 10) & 1) == 0) p *= a[i] % 10;
+				printf("%d ", p);
+			}
+		}
+	return 0;
+}

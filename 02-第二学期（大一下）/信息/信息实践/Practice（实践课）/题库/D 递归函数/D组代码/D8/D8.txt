@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main () {
+	int a, b;
+	for (scanf("%d%d", &a, &b); a != b; a += a < b ? 1 : -1) printf("%d ", a);
+	printf("%d", b);
+    return 0;
+}

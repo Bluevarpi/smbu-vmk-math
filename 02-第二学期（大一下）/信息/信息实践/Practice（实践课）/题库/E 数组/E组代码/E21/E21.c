@@ -1,0 +1,16 @@
+#include <stdio.h>
+int a[12], last[10], n, tmp;
+int main () {
+	for (char c; (c = getchar()) != '\n'; last[a[n]] = n) a[++n] = c - '0';
+	for (int i = 1; i <= n; i++)
+		for (int j = 9; j > a[i]; j--)
+			if (last[j] > i) {
+				tmp = a[i];
+				a[i] = a[last[j]];
+				a[last[j]] = tmp;
+				for (int k = 1; k <= n; k++) printf("%d", a[k]);
+				return 0;
+			}
+	for (int i = 1; i <= n; i++) printf("%d", a[i]);
+	return 0;
+}

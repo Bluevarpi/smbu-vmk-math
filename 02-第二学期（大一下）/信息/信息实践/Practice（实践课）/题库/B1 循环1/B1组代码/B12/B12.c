@@ -1,0 +1,7 @@
+#include <stdio.h>
+int n, max, min = 9;
+int main () {
+	for (char c; (c = getchar()) != '\n'; max = max < n ? n : max, min = min > n ? n : min) n = c - '0';
+	printf("%d %d", min, max);
+	return 0;
+}

@@ -1,0 +1,7 @@
+#include <stdio.h>
+int a[11];
+int main () {
+	for (int i = 1; i <= 10 && scanf("%d", &a[i]); i++) a[0] = a[10];
+	for (int i = 0; i <= 9; i++) printf("%d ", a[i]);
+	return 0;
+}

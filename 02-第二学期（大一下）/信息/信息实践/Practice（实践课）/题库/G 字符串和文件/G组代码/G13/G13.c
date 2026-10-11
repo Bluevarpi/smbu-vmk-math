@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+#include <ctype.h>
+
+bool isLetter(const char *str, char *dot) {
+    if (*dot == '\0') return false;
+    while (*++dot) if (!isalpha((unsigned char)*dot)) return false;
+    return true;
+}
+
+int main() {
+    FILE *Input, *Output;
+    char line[100000];
+    Input = fopen("input.txt", "r");
+    Output = fopen("output.txt", "w");
+    while (fgets(line, sizeof(line), Input) != NULL) {
+        char *newline = strchr(line, '\n');
+        if (newline) *newline = '\0';
+        char *dot = strrchr(line, '.');
+        if (dot && isLetter(line, dot)) {
+            *dot = '\0';
+            strcat(line, ".html");
+        } else strcat(line, ".html");
+        fputs(line, Output);
+    }
+    fclose(Input);
+    fclose(Output);
+    return 0;
+}

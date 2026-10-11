@@ -1,0 +1,4 @@
+#include <stdio.h>
+int main () {
+	for (int n, m = -2147483647; scanf("%d", &n); m = m < n ? n : m) if (n == 0) { printf("%d", m); return 0;}
+}

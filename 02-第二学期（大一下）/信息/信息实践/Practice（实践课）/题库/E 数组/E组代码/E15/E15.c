@@ -1,0 +1,7 @@
+#include <stdio.h>
+int a[11];
+int main () {
+	for (int i = 1; i <= 10 && scanf("%d", &a[i]); i++) if (a[i] > 0) printf("%d ", a[i]);
+	for (int i = 1; i <= 10; i++) if (a[i] < 0) printf("%d ", a[i]);
+	return 0;
+}

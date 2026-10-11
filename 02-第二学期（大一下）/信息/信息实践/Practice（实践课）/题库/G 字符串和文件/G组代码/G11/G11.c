@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int main() {
+    char input[1001];
+    int cnt = 0;
+    FILE *inFile, *outFile;
+    inFile = fopen("input.txt", "r");
+    if (fgets(input, 1001, inFile) == NULL) fclose(inFile);
+    fclose(inFile);
+    if(strlen(input) > 0 && input[strlen(input) - 1] == '\n') input[strlen(input) - 1] = '\0';
+    for (char *token = strtok(input, " \n"); token != NULL; token = strtok(NULL, " \n")) if (token[strlen(token) - 1] == 'a') cnt++;
+    outFile = fopen("output.txt", "w");
+    fprintf(outFile, "%d", cnt);
+    fclose(outFile);
+    return 0;
+}

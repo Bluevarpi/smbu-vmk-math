@@ -1,0 +1,7 @@
+void *findMaxBlock(list *head) {
+    if (!head) return NULL;
+    void *addr = head->address;
+	size_t max = head->size;
+    for (; head; head = head->next) if (head->size > max) max = head->size, addr = head->address;
+    return addr;
+}

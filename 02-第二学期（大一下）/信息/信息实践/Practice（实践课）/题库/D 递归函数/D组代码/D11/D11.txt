@@ -1,0 +1,7 @@
+#include <stdio.h>
+int n, cnt;
+int main () {
+    for (scanf("%d", &n); n; n >>= 1) cnt += n & 1;
+	printf("%d", cnt);
+	return 0;
+}

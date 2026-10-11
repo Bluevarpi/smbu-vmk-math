@@ -1,0 +1,7 @@
+#include <stdio.h>
+int a[13], sum;
+int main () {
+	for (int i = 1; i <= 12; sum += a[i++]) scanf("%d", &a[i]);
+	printf("%.2f", (float) sum / 12);
+	return 0;
+}

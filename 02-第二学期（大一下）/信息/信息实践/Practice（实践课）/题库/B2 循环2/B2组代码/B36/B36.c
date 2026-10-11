@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main () {
+    int n, a[] = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    scanf("%d", &n);
+    printf("%d", 1 <= n && n <= 12 ? a[n] : a[0]);
+    return 0;
+}

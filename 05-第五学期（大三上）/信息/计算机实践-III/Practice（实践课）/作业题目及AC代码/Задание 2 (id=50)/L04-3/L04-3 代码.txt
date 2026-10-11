@@ -1,0 +1,4 @@
+int myputchar(int c) {
+    char ch = c;
+    return write(STDOUT_FILENO, &ch, 1) == 1 ? (unsigned char)c : -1;
+}

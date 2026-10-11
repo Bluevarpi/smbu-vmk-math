@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main () {
+	int a[11], k = 1, l = 1;
+	for (int i = 1; i <= 10; k = a[k] < a[i] ? i : k, l = a[l] > a[i] ? i : l, i++) scanf("%d", &a[i]);
+	printf("%d %d %d %d", k, a[k], l, a[l]);
+	return 0;
+}

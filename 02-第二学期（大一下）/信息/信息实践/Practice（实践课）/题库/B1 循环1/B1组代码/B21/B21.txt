@@ -1,0 +1,5 @@
+#include <stdio.h>
+int main () {
+	for (char c; (c = getchar()) != '.'; putchar(c)) if ('A' <= c && c <= 'Z') c -= 'A' - 'a';
+	return 0;
+}

@@ -1,0 +1,7 @@
+#include <stdio.h>
+int cnt;
+int main () {
+	for (char c; (c = getchar()) != '.';) if ('0' <= c && c <= '9') cnt++;
+	printf("%d", cnt);
+	return 0;
+}

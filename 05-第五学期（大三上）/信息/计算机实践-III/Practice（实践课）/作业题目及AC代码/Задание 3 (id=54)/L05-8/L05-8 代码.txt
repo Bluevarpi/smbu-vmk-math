@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct node { struct node *t; int hd; } node;
+
+int h[10000], front, back, minHD, maxHD, seen[20005], val[20005], hd, idx;
+
+void btUpView(tree *root) {
+    if (!root) return;
+    tree *q[10000], *cur;
+    q[back] = root, h[back++] = 0;
+    while (front < back) {
+        cur = q[front], hd = h[front++], idx = hd + 10000;
+        if (!seen[idx]) seen[idx] = 1, val[idx] = cur->key, minHD = hd < minHD ? hd : minHD, maxHD = hd > maxHD ? hd : maxHD;
+        if (cur->left) q[back] = cur->left, h[back++] = hd - 1;
+        if (cur->right) q[back] = cur->right, h[back++] = hd + 1;
+    }
+    for (int i = minHD + 10000; i <= maxHD + 10000; i++) if (seen[i]) printf("%d ", val[i]);
+}

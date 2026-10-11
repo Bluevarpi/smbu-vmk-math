@@ -1,0 +1,7 @@
+#include <stdio.h>
+char c, ans = '0';
+int main () {
+	while ( (c = getchar()) != '\n') if (ans < c) ans = c;
+	printf("%c", ans);
+	return 0;
+}

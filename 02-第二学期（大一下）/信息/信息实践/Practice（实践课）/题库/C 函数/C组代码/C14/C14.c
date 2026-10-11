@@ -1,0 +1,7 @@
+#include <stdio.h>
+int cnt;
+int main () {
+	for (char c; (c = getchar()) != '\n'; cnt += (c - '0') % 2);
+	printf(cnt % 2 ? "NO" : "YES");
+	return 0;
+}

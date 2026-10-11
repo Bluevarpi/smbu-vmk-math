@@ -1,0 +1,5 @@
+char *mygets(char *s) {
+    char *ptr = s, buffer; ssize_t n;
+    while ((n = read(STDIN_FILENO, &buffer, 1)) > 0 && buffer != '\n') *ptr++ = buffer;
+    return n < 0 || (n == 0 && ptr == s) ? NULL : (*ptr = '\0', s);
+}

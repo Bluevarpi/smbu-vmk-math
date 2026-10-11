@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main () {
+	int n;
+	scanf("%d", &n);
+	printf(100 <= n && n <= 999 ? "YES" : "NO");
+	return 0;
+}

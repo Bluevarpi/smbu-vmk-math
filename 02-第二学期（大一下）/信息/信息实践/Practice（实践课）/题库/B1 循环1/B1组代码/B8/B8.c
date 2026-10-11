@@ -1,0 +1,7 @@
+#include <stdio.h>
+int n, cnt;
+int main () {
+	for (char c; (c = getchar()) != '\n';) if (c == '9') cnt++;
+	printf(cnt == 1 ? "YES" : "NO");
+	return 0;
+}

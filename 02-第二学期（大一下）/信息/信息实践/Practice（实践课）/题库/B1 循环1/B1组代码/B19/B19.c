@@ -1,0 +1,7 @@
+#include <stdio.h>
+int s;
+int main () {
+	for (char c; (c = getchar()) != '\n'; s += c - '0');
+	printf(s == 10 ? "YES" : "NO");
+	return 0;
+}

@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main () {
+    int month, day, a[] = {0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334};
+    scanf("%d%d", &month, &day);
+    printf("%d", 365 - a[month] - day);
+    return 0;
+}

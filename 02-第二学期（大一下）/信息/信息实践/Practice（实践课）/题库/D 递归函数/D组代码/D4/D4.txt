@@ -1,0 +1,5 @@
+#include <stdio.h>
+int main () {
+	for (char c; (c = getchar()) != '\n'; printf("%c ", c));
+	return 0;
+}

@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+char a[1002];
+int b[1002], n, len, flag;
+int main () {
+    freopen("input.txt", "r", stdin);
+    #ifdef SENSOR_FAUCET
+    freopen("output.txt", "w", stdout);
+    #endif
+    fgets(a, 1002, stdin);
+    for (len = strlen(a); len && a[len - 1]=='\n'; a[--len] = '\0');
+    for(int i = 0; i < len; i++) if ('a' <= a[i] && a[i] <= 'z') b[a[i]]++;
+    for (int i = 'a'; i <= 'z'; i++) if (b[i] & 1) flag++;
+    printf(flag > 1 ? "NO" : "YES");
+    return 0;
+}
